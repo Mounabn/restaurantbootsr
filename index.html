@@ -1,11 +1,279 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>restaurant</title>
+  <!--boostrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!--icones-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    
+  <div class="all-content">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="logo"><img
+            src="data:image/png;base64,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"
+            alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">contact</a>
+            </li>
+            
+
+
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--navbar-->
+
+    <!--home section-->
+    <section id="home">
+      <div class="content">
+        <h3>Start your day with a <br> fresh breakfast</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at eleifend ligula, non suscipit
+          magna.<br>
+          Nullam eu aliquet ligula. Mauris eleifend, odio non rhoncus rhoncus, quam elit blandit urna, ac viverra<br>
+          risus nunc eget mi.
+          Donec egestas aliquam mattis. </p>
+        <button id="btn">Reserve Now</button>
+      </div>
+    </section>
+
+    <!--about section-->
+    <section id="about">
+      <div class="container">
+        <div class="heading">About<span>Us</span></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/photos-premium/plat-gastronomique-preparation-dans-cuisine-restaurant-haut-gamme_941600-12208.jpg"
+                alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>What Makes Our Restaurant Special?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptas deleniti. Suscipit eos doloribus
+              voluptate, alias soluta possimus nam illum beatae rem
+              , reprehenderit consequatur qui hic exercitationem non consequuntur fugiat?
+              <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odit aliquid provident! Optio
+              architecto amet dolore modi deleniti dolorem cumque. Similique
+              nihil maiores. Facere voluptas
+              labore illum quisquam illo quo.
+              <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam odit aliquid provident! Optio
+              architecto amet dolore modi deleniti dolorem cumque. Similique
+              nihil maiores. Facere voluptas
+              labore illum quisquam illo quo.
+            </p>
+            <button id="aboutbtn">Learn More.</button>
+          </div>
+
+
+        </div>
+    </section>
+    <!--menu section-->
+
+    <section id="menu">
+      <div class="container">
+        <div class="heading">Top<span>Categories</span></div>
+        <div class="row" style="margin-top: 30px;">
+
+
+
+          <div class="col-md-4 py-3 py-md 0">
+            <div class="first">
+              <img src="https://www.luma-marrakech.com/wp-content/uploads/2022/12/CALAMAR-luma-restaurant-marrakech.jpg"
+                alt="">
+              <h3>CALAMAR</h3>
+              <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md 0">
+            <div class="first">
+              <img
+                src="https://www.luma-marrakech.com/wp-content/uploads/2023/11/TARTINE-DANCHOIS-luma-restaurant-marrakech-600x434.webp"
+                alt="">
+              <h3>TARTINE D’ANCHOIS</h3>
+              <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md 0">
+            <div class="first">
+              <img
+                src="https://www.luma-marrakech.com/wp-content/uploads/2022/12/CREVETTES-GRISES-luma-restaurant-marrakech.jpg"
+                alt="">
+              <h3>CREVETTES GRISES</h3>
+              <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md 0">
+            <div class="first">
+              <img
+                src="https://www.luma-marrakech.com/wp-content/uploads/2022/12/SELECTION-De-fromages-luma-restaurant-marrakech.jpg"
+                alt="">
+              <h3>SELECTION De Fromage</h3>
+              <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  </section>
+
+
+  <!--gallery-->
+  <div class="container" id="gallery">
+    <div class="heading">Our<span>Gallery</span></div>
+    <div class="row" style="margin-top: 30px;">
+
+      <div class="col-md-4 py-3 py-md 0">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/a8/62/d8/a862d8e534919bcc6ad34c29389fe1d7.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 py-3 py-md 0">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/71/26/54/7126541de7f4ae08a8c1aadc80c832cd.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 py-3 py-md 0">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/4f/68/08/4f68084c902e720040a61c6092d13a57.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 py-3 py-md 0">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/8b/6d/37/8b6d377f3fc16bc51cf7cf546e45248e.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 py-3 py-md 0">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/eb/c3/6c/ebc36c79c4a92c8c80e6d9a0fcff3a5d.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 py-3 py-md 0">
+        <div class="card">
+          <img src="https://i.pinimg.com/564x/7c/74/15/7c741574a782cc82a91bebdec1df41d9.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--contact section-->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+
+      
+<div class="col-md-7">
+  <div class="heading">Contact<span>Us</span></div>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+     <br>sint nostrum dignissimos recusandae?</p>
+     <input type="texte" id="fullname" class="form-control" placeholder="Nam" aria-label="default input exemlpe"><br>
+     <input type="texte" class="form-control" placeholder="Email" aria-label="default input exemlpe"><br>
+     <input type="texte" class="form-control" placeholder="Number" aria-label="default input exemlpe"><br>
+     <button id="contact-btn">Send Message</button>
+</div>
+
+<div class="col-md-5" id="col">
+  <h1>Info</h1>
+  <p><i class="fa-regular faenvelope"></i> exemple@gmail.com</p>
+  <p><i class="fa-solid fa-phone"></i> +2120000000000</p>
+  <p><i class="fa-solid fa-bildiing-colums"></i> Casablanca</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+
+
+
+
+</div>
+        
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <footer id="footer">
+   <div class="footer-logo text-center"><img src="data:image/png;base64,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" alt=""></div>
+   <div class="social-links text-center">
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-pinterest"></i>
+   </div>
+  <div class="copyright text-center">
+    &copy;copyright<strong><span>Restaurant</span></strong>. All Rights Reserved.
+  </div>
+  </footer>
+
+
+
+
+  <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("CeeShLXhGqD7AhUqy");
+   })();
+</script>
 </body>
+
 </html>

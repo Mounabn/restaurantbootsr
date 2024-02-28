@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+.all content{
+    background: white;
+}
+html ::-webkit-scrollbar-thumb{
+    background: #DFA878;
+    border-radius: 10px;
+
+}
+html ::-webkit-scrollbar{
+    width: 10px;
+
+}
+/*navbar*/
+#navbar{
+    background-color:#DFA878;
+}
+#logo img{
+    
+    border-radius: 10px;
+    width: 90px;
+    height: auto;
+    margin-left: 40px;
+}
+.navbar.nav{
+    margin-left: 50px;
+}
+.nav-item .nav-link{
+    color: black;
+    margin-left: 10px;
+    font-weight: bold;
+   
+}
+.nav-item .nav-link:hover{
+    background: white;
+    border-radius: 5px;
+    color: black;
+    transition: 0.5s;
+}
+#navbar form button{
+    background: black;
+    color: white;
+    border: 1px solid white;
+
+}
+
+
+/* home section*/
+#home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://storage.googleapis.com/mytour-prod/blog/1687878015795_shutterstock-795649972-jpg.jpeg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: 88%;
+}
+#home .content{
+    padding-top: 210px;
+    margin-left: 56px;
+
+}
+#home .content h3{
+    font-size: 50px;
+    color: white;
+}
+#home .content p{
+    margin-top: 10px;
+    color: white;
+}
+#btn{
+    width: 150px;
+    height: 36px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color:#DFA878;
+    color: white;
+}
+
+
+/* about section*/
+#about{
+    width: 100%;
+    height: 100vh;
+
+}
+#about .container{
+    padding-top: 70px;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 50px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+.heading span{
+    color: #DFA878;
+}
+#about .card img{
+    border-radius: 10px;
+
+}
+#about .card {
+    border-radius: 10px;
+
+}
+#aboutbtn{
+    width: 200px;
+    height: 36px;
+    background: transparent;
+    border: 2px solid #DFA878;
+    font-weight: bold;
+    transition: 0.5S;
+}
+#aboutbtn:hover{
+    background-color: #DFA878;
+    color: white;
+}
+
+#menu .first img{
+    width: 310px;
+    height: 233px;
+    border-radius: 10px;
+    
+   
+}
+#menu .first {
+    margin-left: 10px;
+}
+#menu .first:hover{
+    transform: translatey(-10px);
+    cursor: pointer;
+    
+}
+
+
+/*gallery*/
+#gallery{
+    width: 100%;
+}
+#gallery .card{
+    border-radius: 10px;
+    cursor: pointer;
+}
+#gallery .card img{
+    width: 360px;
+    height: 233px;
+    background-size: cover;
+}
+
+/* contact start*/
+#contact{
+    width: 100%;
+    height: 100vh;
+    padding-top: 70px;
+    
+
+}
+#contact .container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, white 80%, #DFA878 20%);
+    border-radius: 10px;
+   
+}
+#contact p{
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+#contact-btn{
+    width: 200px;
+    height: 36px;
+    border: none;
+    background: #DFA878;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#col{
+    width: 35%;
+    height: 56vh;
+    background: rgb(36, 35, 35);
+    margin-top: 78px;
+    
+
+}
+#contact h1{
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#contact #col p{
+    color: white;
+    font-size: 15px;
+    margin-left: 13px;
+    margin-top: 30px;
+
+}
+#contact .container input{
+    width: 85%;
+
+}
+/*footer*/
+#footer{
+    width: 100%;
+    background: #DFA878;
+    margin-top: 50px;
+}
+.footer-logo img{
+    border-radius: 10px;
+    width: 90px;
+    height: auto;
+    margin-top: 30px;
+}
+#footer .social-links i{
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 30px;
+   
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+    
+    
+
+
+
